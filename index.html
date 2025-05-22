@@ -1,38 +1,32 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Roma228Work</title>
-  </head>
-  <body>
-    <h3>Введите ID</h3>
-    <br>
-    <p id="text"></p>
-    <br>
-    <br>
-    <div class="keyboard">
-      <button id="1" class="key">1</button>
-      <button id="2" class="key">2</button>
-      <button id="3" class="key">3</button>
-      <br>
-      <button id="4" class="key">4</button>
-      <button id="5" class="key">5</button>
-      <button id="6" class="key">6</button>
-      <br>
-      <button id="7" class="key">7</button>
-      <button id="8" class="key">8</button>
-      <button id="9" class="key">9</button>
-    </div>
-    <script>
-         const keys = document.querySelectorAll('.key');
-         const text = document.getElementById('text');
-         keys.forEach(key => {
-            key.addEventListener('click', function() {
-               text.value += this.textContent;
-            });
-         });
-      
-      if (text = 1145) {
-        document.getElementById("text").innerHTML = "Ваша ссылка: https://Roma228Work.github.io/test1145gfdhggdhgdghdygdfdfcgcvdghdugegrtgdhsgvgcgfvcgfgydtrtegdbc.html";
-      }
-    </script>
-  </body>
+<head>
+  <title>Ввод с помощью кнопок</title>
+</head>
+<body>
+  <p id="result">Результат:</p>
+
+  <button id="button1">1</button>
+  <button id="button2">2</button>
+  <button id="button3">3</button>
+  <button id="button4">4</button>
+  <button id="button5">5</button>
+  <button id="button6">6</button>
+  <button id="button7">7</button>
+  <button id="button8">8</button>
+  <button id="button9">9</button>
+  <button id="button0">0</button>
+
+  <script>
+    const result = document.getElementById('result');
+
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        result.textContent += button.textContent;
+      });
+    });
+  </script>
+</body>
 </html>
