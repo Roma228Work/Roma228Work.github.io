@@ -1,0 +1,61 @@
+﻿<html>
+   <head>
+      <title>test1</title>
+      <style>
+         html {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+         }
+         .key {
+            font-size: 100px;
+            background-color: white;
+            display: inline;
+            color: black;
+         }
+         input {
+            background-color: white;
+            display: inline;
+            font-size: 100px;
+         }
+         .keycp {
+            font-size: 100px;
+            background-color: white;
+            display: inline;
+            color: black;
+         }
+      </style>
+   </head>
+   <body>
+      <label for="text">Вводите цифры</label>
+      <br>
+      <input id="text" maxlength="22"></input>
+      <br>
+      <br>
+      <div class="keyboard">
+         <button id="1" class="key">1</button>
+         <button id="2" class="key">2</button>
+         <button id="3" class="key">3</button>
+         <button id="4" class="key">4</button>
+         <button id="5" class="key">5</button>
+         <br>
+         <button id="6" class="key">6</button>
+         <button id="7" class="key">7</button>
+         <button id="8" class="key">8</button>
+         <button id="9" class="key">9</button>
+         <button id="0" class="key">0</button>
+      </div>
+      <script>
+         const keys = document.querySelectorAll('.key');
+         const text = document.getElementById('text');
+         keys.forEach(key => {
+            key.addEventListener('click', function() {
+               text.value += this.textContent;
+            });
+         });
+      </script>
+      <br>
+      <form action="">
+         <button class="keycp">RESET</button>
+      </form>
+   </body>
+</html>
