@@ -3,10 +3,33 @@
     <title>Roma228Work</title>
   </head>
   <body>
-    <label for="text">Введите ID</label>
+    <h3>Введите ID</h3>
     <br>
-    <input id="text"></input>
+    <p id="text"></p>
+    <br>
+    <br>
+    <div class="keyboard">
+      <button id="1" class="key">1</button>
+      <button id="2" class="key">2</button>
+      <button id="3" class="key">3</button>
+      <br>
+      <button id="4" class="key">4</button>
+      <button id="5" class="key">5</button>
+      <button id="6" class="key">6</button>
+      <br>
+      <button id="7" class="key">7</button>
+      <button id="8" class="key">8</button>
+      <button id="9" class="key">9</button>
+    </div>
     <script>
+         const keys = document.querySelectorAll('.key');
+         const text = document.getElementById('text');
+         keys.forEach(key => {
+            key.addEventListener('click', function() {
+               text.value += this.textContent;
+            });
+         });
+      
       if (text = 1145) {
         document.getElementById("text").innerHTML = "Ваша ссылка: https://Roma228Work.github.io/test1145gfdhggdhgdghdygdfdfcgcvdghdugegrtgdhsgvgcgfvcgfgydtrtegdbc.html";
       }
